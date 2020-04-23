@@ -21,7 +21,7 @@ export class StackArray {
       this.top--;
       return this.items.pop();
     } else {
-      return `Stack is Empty,You can not remove`;
+      return `Stack is Empty`;
     }
   }
   peek() {
@@ -57,7 +57,7 @@ export class StackObject {
   }
   pop() {
     if (this.isEmpty()) {
-      return undefined;
+      return `Stack is Empty`;
     }
     this.count--;
     const result = this.items[thid.count];
@@ -66,7 +66,7 @@ export class StackObject {
   }
   peek() {
     if (this.isEmpty()) {
-      return undefined;
+      return `Stack is Empty`;
     }
     return this.items[this.count--];
   }
