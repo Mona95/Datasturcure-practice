@@ -60,7 +60,7 @@ export class StackObject {
       return `Stack is Empty`;
     }
     this.count--;
-    const result = this.items[thid.count];
+    const result = this.items[this.count];
     delete this.items[this.count];
     return result;
   }
