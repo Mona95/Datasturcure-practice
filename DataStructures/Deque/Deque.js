@@ -64,7 +64,7 @@ export class Deque {
       return `Deque is Empty`;
     }
     this.count--;
-    const result = this.items[thid.count];
+    const result = this.items[this.count];
     delete this.items[this.count];
     return result;
   }
@@ -81,5 +81,11 @@ export class Deque {
       return `Stack is Empty`;
     }
     return this.items[this.count--];
+  }
+  isEmpty() {
+    return this.count === 0;
+  }
+  size() {
+    return this.count;
   }
 }

@@ -29,3 +29,66 @@ console.log(decimalToBinary(233)); // 11101001
 
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
+
+/**
+ * using `Queue`
+ * HotPotato Game : will use a modified version of Queues (circular queue)
+ */
+function hotPotato(elementsList, num) {
+  const queue = new Queue();
+  const elimitatedList = [];
+  for (let i = 0; i < elementsList.length; i++) {
+    queue.enqueue(elementsList[i]);
+  }
+  while (queue.size() > 1) {
+    for (let i = 0; i < num; i++) {
+      queue.enqueue(queue.dequeue());
+    }
+    elimitatedList.push(queue.dequeue());
+  }
+  return { eliminated: elimitatedList, winner: queue.dequeue() };
+}
+
+const names = ["John", "Jack", "Camila", "Ingrid", "Carl"];
+const result = hotPotato(names, 7);
+console.log(result);
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+/**
+ * using `Deque`
+ * Palindrome Checker : A palindrome is a word, phrase, number, or other sequence of
+ * characters which reads the same backward as forward, such as madam or racecar.
+ * deque is a merger between stack and queue, so we can use it easily for this problem
+ */
+function palindromeChecker(aString) {
+  if (
+    aString === undefined ||
+    aString === null ||
+    (aString !== null && aString.length === 0)
+  ) {
+    return false;
+  }
+  const deque = new Deque();
+  const lowerString = aString.toLocaleLowerCase().split(" ").join("");
+  let isEqual = true;
+  let firstChar, lastChar;
+  for (let i = 0; i < lowerString.length; i++) {
+    deque.addBack(lowerString.charAt(i));
+  }
+  while (deque.size() > 1 && isEqual) {
+    firstChar = deque.removeFront();
+    lastChar = deque.removeBack();
+    if (firstChar !== lastChar) {
+      isEqual = false;
+    }
+  }
+  return isEqual;
+}
+
+console.log("kayak", palindromeChecker("kayak"));
+console.log("Step on no pets", palindromeChecker("Step on no pets"));
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
