@@ -3,6 +3,12 @@ import { Queue } from "./DataStructures/Queue/Queue.js";
 import { Deque } from "./DataStructures/Deque/Deque.js";
 import { LinkedList } from "./DataStructures/LinkedLists/LinkedList.js";
 
+const linkedList = new LinkedList();
+linkedList.push("MZA");
+linkedList.push("NEN");
+linkedList.push("MOSTAFA");
+debugger;
+console.log(linkedList);
 /**
  * using "STACK"
  * Converting Decimal numbers to binary

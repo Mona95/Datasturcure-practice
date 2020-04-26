@@ -49,7 +49,16 @@ export class LinkedList {
   //This method inserts a new element at a specified position in the list.
   insert(element, position) {}
   //This method returns the element of a specific position in the list. If the element does not exist in the list, it returns undefined.
-  getElementAt(index) {}
+  getElementAt(index) {
+    if (index >= 0 && index < this.count) {
+      let current = this.head;
+      for (let i = 0; i < index && current != null; i++) {
+        current = current.next;
+      }
+      return current;
+    }
+    return undefined;
+  }
   remove(element) {}
   //find a specific element in the linkedList
   indexOf() {}
@@ -68,12 +77,8 @@ export class LinkedList {
       if (index === 0) {
         this.head = current.next;
       } else {
-        let previous;
-        for (let i = 0; i < index; i++) {
-          previous = current;
-          current = current.next;
-        }
-        // link previous with current's next: skip it to remove
+        const previous = this.getElementAt(index - 1);
+        current = previous.next;
         previous.next = current.next;
       }
       this.count--;
