@@ -83,9 +83,21 @@ export class LinkedList {
     }
     return undefined;
   }
-  remove(element) {}
+  remove(element) {
+    let elementIndex = this.indexOf(element);
+    return this.removeAt(elementIndex);
+  }
   //find a specific element in the linkedList
-  indexOf() {}
+  indexOf(element) {
+    let current = this.head;
+    for (let i = 0; i < this.count && current != null; i++) {
+      if (this.equalsFn(element, current.element)) {
+        return i;
+      }
+      current = current.next;
+    }
+    return -1;
+  }
   /**
    *we need to variable for this method
    *current = holds the current node
@@ -111,10 +123,27 @@ export class LinkedList {
     return undefined;
   }
   isEmpty() {
-    return this.head == null;
+    return this.size() === 0;
   }
-  size() {}
-  // This method returns a string representation of the linked list. As the list uses a Node class as an element,
+  size() {
+    return this.count;
+  }
+  getHead() {
+    return this.head;
+  }
+  // This method returns a string representation of the linked list.
+  //As the list uses a Node class as an element,
   // we need to overwrite the default toString method inherited from the JavaScript Object class to output only the element values.
-  toString() {}
+  toString() {
+    if (this.head == null) {
+      return ``;
+    }
+    let objString = `${this.head.element}`,
+      current = this.head.next;
+    for (let i = 0; i < this.size() && current != null; i++) {
+      objString = `${objString}, ${current.element}`;
+      current = current.next;
+    }
+    return objString;
+  }
 }
