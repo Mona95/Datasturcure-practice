@@ -1,6 +1,7 @@
 import { StackArray, StackObject } from "./DataStructures/Stack/Stack.js";
 import { Queue } from "./DataStructures/Queue/Queue.js";
 import { Deque } from "./DataStructures/Deque/Deque.js";
+import { LinkedList } from "./DataStructures/LinkedLists/LinkedList.js";
 
 /**
  * using "STACK"
