@@ -47,7 +47,31 @@ export class LinkedList {
     this.count++;
   }
   //This method inserts a new element at a specified position in the list.
-  insert(element, position) {}
+  //It is very important to have variables referencing the nodes
+  //we need to control so that we do not lose the link between the nodes.
+  insert(element, index) {
+    if (index >= 0 && index <= this.count) {
+      const node = new Node(element);
+      //add on first position
+      if (index === 0) {
+        let current = this.head;
+        //because the first element is head , and if we wanna add
+        //new item in head, so first we have to assign the next of node to this.head
+        //in this case node will be positioned before head (will be first element)
+        node.next = current;
+        this.head = node;
+      } else {
+        //inserted node should be between two node, the current one and the previous one
+        let previous = this.getElementAt(index - 1);
+        let current = previous.next;
+        node.next = current;
+        previous.next = node;
+      }
+      this.count++;
+      return true;
+    }
+    return false;
+  }
   //This method returns the element of a specific position in the list. If the element does not exist in the list, it returns undefined.
   getElementAt(index) {
     if (index >= 0 && index < this.count) {
