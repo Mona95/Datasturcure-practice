@@ -1,4 +1,5 @@
 import { defaultEquals } from "../../utils.js";
+import { Node } from "./node/Node.js";
 /**
  * Linked lists store a sequential collection of elements but, unlike arrays,
  *  in linked lists the elements are not placed contiguously in memory.
@@ -9,16 +10,10 @@ import { defaultEquals } from "../../utils.js";
  *  in the linked list,
  *  if we want to access an element from the middle,
  *  we need to start from the beginning (head) and iterate the list until we find the desired element.
+ *
+ * linkedlist node: [element,next]
+ * next points to next node
  */
-
-//To Represent the head and other Elements we need a helper class
-//linkedList contains a Node which has two parts (value,next poiner)
-class Node {
-  constructor(element) {
-    this.element = element; //the value that we want to add in the list
-    this.next = undefined; //the pointer that contains the link to the next Node in list
-  }
-}
 
 export class LinkedList {
   constructor(equalsFn = defaultEquals) {
