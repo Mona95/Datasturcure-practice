@@ -28,4 +28,41 @@ export class DoublyLinkedList extends LinkedList {
     super(count, head, equalsFn);
     this.tail = undefined; //keep refrence to track last element
   }
+
+  insert(element, index) {
+    if (index >= 0 && index <= this.count) {
+      const node = new DoublyNode(element);
+      let current = this.head;
+      if (index === 0) {
+        //if head is undefined, both head and tail should be node
+        if (current == null) {
+          this.head = node;
+          this.tail = node;
+        } else {
+          //if head is defined, node.next should point to head
+          //so this means the current head will be moved and node goes to first position
+          node.next = this.head;
+          current.prev = node;
+          this.head = node;
+        }
+      } else if (index === this.count) {
+        //if node wants to be inserted as the last item of list
+        //this means the tail should go to one node before and tail.next should point the new node
+        const current = this.getElementAt(this.count - 1);
+        current.next = node;
+        node.prev = current;
+        this.tail = node;
+      } else {
+        const previous = this.getElementAt(index - 1);
+        current = previous.next;
+        node.next = current;
+        current.prev = node;
+        node.prev = previous;
+        previous.next = node;
+      }
+      this.count++;
+      return true;
+    }
+    return false;
+  }
 }
