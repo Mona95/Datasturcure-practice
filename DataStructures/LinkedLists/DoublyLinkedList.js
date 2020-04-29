@@ -91,4 +91,24 @@ export class DoublyLinkedList extends LinkedList {
     }
     return false;
   }
+  //Convert elements to String started from tail
+  inverseToString() {
+    if (this.tail == null) {
+      return "";
+    }
+    let objString = `${this.tail.element}`;
+    let previous = this.tail.prev;
+    while (previous != null) {
+      objString = `${objString},${previous.element}`;
+      previous = previous.prev;
+    }
+    return objString;
+  }
+  getTail() {
+    return this.tail;
+  }
+  clear() {
+    super.clear();
+    this.tail = undefined;
+  }
 }
