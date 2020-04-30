@@ -3,6 +3,7 @@ import { Queue } from "./DataStructures/Queue/Queue.js";
 import { Deque } from "./DataStructures/Deque/Deque.js";
 import { LinkedList } from "./DataStructures/LinkedLists/LinkedList.js";
 import { DoublyLinkedList } from "./DataStructures/LinkedLists/DoublyLinkedList.js";
+import { SortedLinkedList } from "./DataStructures/LinkedLists/SortedLinkedList.js";
 
 /**
  * using "STACK"
