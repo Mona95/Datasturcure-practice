@@ -6,8 +6,6 @@ import { DoublyLinkedList } from "./DataStructures/LinkedLists/DoublyLinkedList.
 import { SortedLinkedList } from "./DataStructures/LinkedLists/SortedLinkedList.js";
 import { StackLinkedList } from "./DataStructures/LinkedLists/StackLinkedList.js";
 
-debugger;
-
 /**
  * using "STACK"
  * Converting Decimal numbers to binary
