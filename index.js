@@ -4,6 +4,9 @@ import { Deque } from "./DataStructures/Deque/Deque.js";
 import { LinkedList } from "./DataStructures/LinkedLists/LinkedList.js";
 import { DoublyLinkedList } from "./DataStructures/LinkedLists/DoublyLinkedList.js";
 import { SortedLinkedList } from "./DataStructures/LinkedLists/SortedLinkedList.js";
+import { StackLinkedList } from "./DataStructures/LinkedLists/StackLinkedList.js";
+
+debugger;
 
 /**
  * using "STACK"
