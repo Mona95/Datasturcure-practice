@@ -60,4 +60,62 @@ export class Set {
     }
     return values;
   }
+  //Given two sets, this returns a new set of elements from both of the given sets
+  union(secondSet) {
+    let unionSet = new Set();
+    this.values().forEach((value) => {
+      unionSet.add(value);
+    });
+    secondSet.values().forEach((value) => {
+      unionSet.add(value);
+    });
+    return unionSet;
+  }
+  // Given two sets, this returns a new set with the elements that exist in both sets
+  intersection(secondSet) {
+    let intersectionSet = new Set(),
+      values = this.values(),
+      otherValues = secondSet.values();
+
+    //for optimizing the code, its better to define which set has lesser elements
+    // it decreases the times of iterating over the elements if we start with the smaller set.
+    let biggerSet = values,
+      smallerSet = otherValues;
+
+    if (otherValues.length - values.length > 0) {
+      biggerSet = otherValues;
+      smallerSet = values;
+    }
+    smallerSet.forEach((value) => {
+      if (biggerSet.include(value)) {
+        intersectionSet.add(value);
+      }
+    });
+    return intersectionSet;
+  }
+  //Given two sets, this returns a new set with all the elements that exist in the first set and do not exist in the second set
+  difference(secondSet) {
+    let differenceSet = new Set();
+    this.values().forEach((value) => {
+      if (!secondSet.has(value)) {
+        differenceSet.add(value);
+      }
+    });
+    return differenceSet;
+  }
+  //This confirms whether a given set is a subset of another set
+  subset(secondSet) {
+    if (this.size() > secondSet.size()) {
+      return false;
+    }
+    let isSubset = true;
+    this.values().every((value) => {
+      if (!secondSet.has(value)) {
+        isSubset = false;
+        return false;
+      }
+      return true;
+    });
+    return isSubset;
+  }
 }
