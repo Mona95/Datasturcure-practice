@@ -49,17 +49,52 @@ export class Dictionary {
   hasKey(key) {
     return this.table[this.toStrFn(key)] != null;
   }
-  get(key) {}
-  clear() {}
-  size() {}
-  isEmpty() {}
-  //method returns an array of all `keys`
-  keys() {}
-  //method returns an array of all `values`
-  values() {}
+  get(key) {
+    let valuePair = this.table[this.toStrFn(key)];
+    return valuePair ? valuePair.value : undefined;
+  }
+  clear() {
+    this.table = {};
+  }
+  size() {
+    return Object.keys(this.table).length;
+  }
+  isEmpty() {
+    return this.size() === 0;
+  }
   //method returns and array of value pairs [key,value]
-  keyValues() {}
+  keyValues() {
+    return Object.values(this.table);
+  }
+  //method returns an array of all `keys`
+  keys() {
+    return this.keyValues().map((valuePair) => valuePair.key);
+  }
+  //method returns an array of all `values`
+  values() {
+    return this.keyValues().map((valuePair) => valuePair.value);
+  }
   //method iterates over all the value pairs in dictionary
   //This method can also be interrupted in case the callback function returns false (similar to the `every` method from the Array class).
-  forEach(callbackFn) {}
+  forEach(callbackFn) {
+    const valuePairs = this.keyValues();
+    //using for.loop to have the ability of breaking the loop
+    for (let i = 0; i < valuePairs.length; i++) {
+      let result = callbackFn(valuePairs[i].key, valuePairs[i].value);
+      if (result === false) {
+        break;
+      }
+    }
+  }
+  toString() {
+    if (this.isEmpty()) {
+      return "";
+    }
+    const valuePairs = this.keyValues();
+    let objString = `${valuePairs[0].toString()}`;
+    for (let i = 1; i < valuePairs.length; i++) {
+      objString = `${objString},${valuePairs[i].toString()}`;
+    }
+    return objString;
+  }
 }
