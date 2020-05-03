@@ -9,20 +9,57 @@ import { defaultToString } from "../../utils.js";
  *  we need to transform whatever object is passed as the key into a string to make it easier to search and retrieve values from the Dictionary class
  */
 
+/**
+ * elements in Dictionary include key and value
+ * so we declare an idividual class definition for them
+ */
+class ValuePair {
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
+  toString() {
+    return `[#${this.key}: ${this.value}]`;
+  }
+}
+
 export class Dictionary {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {}; // we will store [key,value] pairs as table[key] = {key,value}
   }
-  set(key, value) {}
-  remove(key) {}
-  hasKey(key) {}
+  //method add a new element to dictionary,if `key` already exists, the old value will be overwritten with the new one.
+  set(key, value) {
+    if (key != null && value != null) {
+      const tableKey = this.toStrFn(key);
+      this.table[tableKey] = new ValuePair(key, value);
+      return true;
+    }
+    return false;
+  }
+  //method removes an element inside a dictionary,uses `key` to find the element
+  remove(key) {
+    if (this.hasKey(key)) {
+      delete this.table[this.toStrFn(key)];
+      return true;
+    }
+    return false;
+  }
+  //checks if the current dictionary has an element with the provided `key`
+  hasKey(key) {
+    return this.table[this.toStrFn(key)] != null;
+  }
   get(key) {}
   clear() {}
   size() {}
   isEmpty() {}
+  //method returns an array of all `keys`
   keys() {}
+  //method returns an array of all `values`
   values() {}
+  //method returns and array of value pairs [key,value]
   keyValues() {}
+  //method iterates over all the value pairs in dictionary
+  //This method can also be interrupted in case the callback function returns false (similar to the `every` method from the Array class).
   forEach(callbackFn) {}
 }
