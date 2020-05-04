@@ -13,7 +13,7 @@ import { defaultToString } from "../../utils.js";
  * elements in Dictionary include key and value
  * so we declare an idividual class definition for them
  */
-class ValuePair {
+export class ValuePair {
   constructor(key, value) {
     this.key = key;
     this.value = value;

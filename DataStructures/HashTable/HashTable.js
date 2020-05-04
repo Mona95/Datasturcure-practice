@@ -1,4 +1,5 @@
 import { defaultToString } from "../../utils.js";
+import { ValuePair } from "../Dictionary/Dictionary.js";
 
 /**
  * HashTable(HastMap)
@@ -12,7 +13,7 @@ import { defaultToString } from "../../utils.js";
  * the Hash Function we will use is called a lose-lose hash function, in which we simply sum up the ASCII values of each character of the key length
  */
 
-class HashTable {
+export class HashTable {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {};
@@ -34,7 +35,30 @@ class HashTable {
   hashCode(key) {
     return this.loseloseHashCode(key);
   }
-  put(key, value) {}
-  remove(key) {}
-  get(key) {}
+  put(key, value) {
+    if (key != null && value != null) {
+      const position = this.hashCode(key); //for the given key, we need to find a position in hash table
+      this.table[position] = new ValuePair(key, value);
+      return true;
+    }
+    return false;
+  }
+  remove(key) {
+    const hash = this.hashCode(key),
+      valuePair = this.table[hash];
+    if (valuePair != null) {
+      delete this.table[hash];
+      return true;
+    }
+    return false;
+  }
+  get(key) {
+    /**
+     * The HashTable and Dictionary classes are very similar. The difference is that in the Dictionary class,
+     *  we store the ValuePair in the key property of the table (after it was transformed to a string), and in the HashTable class,
+     *  we generate a number from the key (hash) and store the ValuePair in the hash position
+     */
+    const valuePair = this.table[this.hashCode(key)];
+    return valuePair ? valuePair.value : undefined;
+  }
 }
