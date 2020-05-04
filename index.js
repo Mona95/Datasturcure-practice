@@ -1,13 +1,4 @@
-import { StackArray, StackObject } from "./DataStructures/Stack/Stack.js";
-import { Queue } from "./DataStructures/Queue/Queue.js";
-import { Deque } from "./DataStructures/Deque/Deque.js";
-import { LinkedList } from "./DataStructures/LinkedLists/LinkedList.js";
-import { DoublyLinkedList } from "./DataStructures/LinkedLists/DoublyLinkedList.js";
-import { SortedLinkedList } from "./DataStructures/LinkedLists/SortedLinkedList.js";
-import { StackLinkedList } from "./DataStructures/LinkedLists/StackLinkedList.js";
-import { Set } from "./DataStructures/Set/Set.js";
-import { Dictionary } from "./DataStructures/Dictionary/Dictionary.js";
-import { HashTable } from "./DataStructures/HashTable/HashTable.js";
+import * as DS from "./all.js";
 
 /**
  * using "STACK"
@@ -17,7 +8,7 @@ import { HashTable } from "./DataStructures/HashTable/HashTable.js";
  * and stack has LIFO principle
  */
 const decimalToBinary = (decNumber) => {
-  let remStack = new StackObject(),
+  let remStack = new DS.StackObject(),
     number = decNumber,
     binaryString = "",
     rem;
@@ -42,7 +33,7 @@ console.log(decimalToBinary(233)); // 11101001
  * HotPotato Game : will use a modified version of Queues (circular queue)
  */
 function hotPotato(elementsList, num) {
-  const queue = new Queue();
+  const queue = new DS.Queue();
   const elimitatedList = [];
   for (let i = 0; i < elementsList.length; i++) {
     queue.enqueue(elementsList[i]);
@@ -77,7 +68,7 @@ function palindromeChecker(aString) {
   ) {
     return false;
   }
-  const deque = new Deque();
+  const deque = new DS.Deque();
   const lowerString = aString.toLocaleLowerCase().split(" ").join("");
   let isEqual = true;
   let firstChar, lastChar;
