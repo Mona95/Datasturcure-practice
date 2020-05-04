@@ -7,6 +7,7 @@ import { SortedLinkedList } from "./DataStructures/LinkedLists/SortedLinkedList.
 import { StackLinkedList } from "./DataStructures/LinkedLists/StackLinkedList.js";
 import { Set } from "./DataStructures/Set/Set.js";
 import { Dictionary } from "./DataStructures/Dictionary/Dictionary.js";
+import { HashTable } from "./DataStructures/HashTable/HashTable.js";
 
 /**
  * using "STACK"

@@ -15,6 +15,7 @@ All the DataStructure implementations are with explanations and guide-comments.<
   - [StackLinkedList](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/LinkedLists/StackLinkedList.js)
 - [Set](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Set/Set.js)
 - [Dictionary](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Dictionary/Dictionary.js)
+- [HashTable](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTable.js)
 
 practices are according to this perfect book :)
 
