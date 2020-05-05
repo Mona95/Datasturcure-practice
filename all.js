@@ -9,6 +9,7 @@ import { Set } from "./DataStructures/Set/Set.js";
 import { Dictionary } from "./DataStructures/Dictionary/Dictionary.js";
 import { HashTable } from "./DataStructures/HashTable/HashTable.js";
 import { HashSet } from "./DataStructures/HashSet/HashSet.js";
+import { HashTableSeparateChaining } from "./DataStructures/HashTable/HashTableSeparateChaining.js";
 
 export {
   StackArray,
@@ -23,4 +24,5 @@ export {
   Dictionary,
   HashTable,
   HashSet,
+  HashTableSeparateChaining,
 };
