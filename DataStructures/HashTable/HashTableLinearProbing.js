@@ -1,5 +1,6 @@
 import { defaultToString } from "../../utils.js";
 import { HashTable } from "../../all.js";
+import { ValuePair } from "../Dictionary/Dictionary.js";
 
 /**
  * Another technique of collision resolution is linear probing.
@@ -13,6 +14,8 @@ import { HashTable } from "../../all.js";
  * in Linear Probing , we have two approach for removing an element.
  * lazy or soft deletion : We use a special value (flag) to indicate that the key-value was deleted.https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/11df56a0-2824-4efb-9167-02b9257f245d.png
  *  move one or more elements to a backward position, shifting (key,value) within the hash table. https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/5adf38dc-3075-448c-99e5-5fb3e269e2ee.png
+ *
+ * in this class we will implement the second approach:
  */
 
 export class HashTableLinearProbing extends HashTable {
@@ -20,5 +23,22 @@ export class HashTableLinearProbing extends HashTable {
     super();
     this.toStrFn = toStrFn;
     this.table = {};
+  }
+  put(key, value) {
+    if (key != null && value != null) {
+      const position = this.hashCode(key),
+        element = this.table[position];
+      if (element == null) {
+        this.table[position] = new ValuePair(key, value);
+      } else {
+        let index = position + 1;
+        while (this.table[index] != null) {
+          index++;
+        }
+        this.table[index] = new ValuePair(key, value);
+      }
+      return true;
+    }
+    return false;
   }
 }
