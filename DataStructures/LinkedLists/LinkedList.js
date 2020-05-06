@@ -94,7 +94,7 @@ export class LinkedList {
     return -1;
   }
   /**
-   *we need to variable for this method
+   *we need two variable for this method
    *current = holds the current node
    *previous = holds one node before the current
    *for removing, the logic is, assiging previous.next to current.next
