@@ -10,6 +10,7 @@ import { Dictionary } from "./DataStructures/Dictionary/Dictionary.js";
 import { HashTable } from "./DataStructures/HashTable/HashTable.js";
 import { HashSet } from "./DataStructures/HashSet/HashSet.js";
 import { HashTableSeparateChaining } from "./DataStructures/HashTable/HashTableSeparateChaining.js";
+import { HashTableLinearProbing } from "./DataStructures/HashTable/HashTableLinearProbing.js";
 
 export {
   StackArray,
@@ -25,4 +26,5 @@ export {
   HashTable,
   HashSet,
   HashTableSeparateChaining,
+  HashTableLinearProbing,
 };
