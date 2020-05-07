@@ -41,4 +41,67 @@ export class HashTableLinearProbing extends HashTable {
     }
     return false;
   }
+  get(key) {
+    const position = this.hashCode(key);
+    if (this.table[position] != null) {
+      if (this.table[position].key === key) {
+        return this.table[position].value;
+      }
+      let index = position + 1;
+      while (this.table[index] != null && this.table[index].key !== key) {
+        //increasing index as long as the position in hashtable is not empty and key is not equal
+        index++;
+      }
+      if (this.table[index] != null && this.table[index].key === key) {
+        return this.table[index].value;
+      }
+    }
+    return undefined;
+  }
+  remove(key) {
+    const position = this.hashCode(key);
+    if (this.table[position] != null) {
+      if (this.table[position].key === key) {
+        delete this.table[position];
+        this.verifyRemoveSideEffect(key, position);
+        return true;
+      }
+      let index = position + 1;
+      while (this.table[index] != null && this.table[index].key !== key) {
+        index++;
+      }
+      if (this.table[index] != null && this.table[index].key === key) {
+        delete this.table[index];
+        this.verifyRemoveSideEffect(key, index);
+        return true;
+      }
+    }
+    return false;
+  }
+  /**
+   * Method is responsible to verify whether the removal element has any side effects.
+   * because while removing, we do not know if there are more elements with the same hash in a different position
+   * logic of the method :
+   *  When a free spot is found, it means the elements are in place and no moves (or more moves) are necessary.
+   *  While iterating the following elements,we need to calculate the hash for the element of the current position.
+   *  If the hash of the current element is lesser or equal to the original hash or if the hash of the current element is lesser or equal to the removedPosition (which is the hash of the last removed key),
+   *  it means we need to move the current element to the removedPosition .
+   *  Doing so, we can delete the current element (since it was copied to the removedPosition).
+   *  We also need to update the removedPosition to the current index, and we repeat the process.
+   * @param {} key => the key that was removed
+   * @param {*} position => the position in which the key was removed
+   */
+  verifyRemoveSideEffect(key, removedPosition) {
+    const hash = this.hashCode(key);
+    let index = removedPosition + 1;
+    while (this.table[index] != null) {
+      const posHash = this.hashCode(this.table[index].key);
+      if (posHash <= hash || posHash <= removedPosition) {
+        this.table[removedPosition] = this.table[index];
+        delete this.table[index];
+        removedPosition = index;
+      }
+      index++;
+    }
+  }
 }
