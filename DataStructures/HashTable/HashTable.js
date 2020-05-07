@@ -1,5 +1,6 @@
 import { defaultToString } from "../../utils.js";
 import { ValuePair } from "../Dictionary/Dictionary.js";
+import { loseloseHasCode } from "./hashFunctions.js";
 
 /**
  * HashTable(HastMap)
@@ -18,22 +19,8 @@ export class HashTable {
     this.toStrFn = toStrFn;
     this.table = {};
   }
-  loseloseHashCode(key) {
-    if (typeof key === "number") {
-      return key;
-    }
-    const tableKey = this.toStrFn(key);
-    let hash = 0;
-    for (let i = 0; i < tableKey.length; i++) {
-      //generate a number based on the sum of each char ASCII value
-      hash += tableKey.charCodeAt(i);
-    }
-    //to work with lower numbers we must use the rest of the division of the hash,
-    //number is arbitrary, this will avoid working with very big numbers
-    return hash % 28;
-  }
   hashCode(key) {
-    return this.loseloseHashCode(key);
+    return loseloseHasCode(key);
   }
   put(key, value) {
     if (key != null && value != null) {
