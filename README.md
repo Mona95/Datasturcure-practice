@@ -1,8 +1,8 @@
 # Datasturcure-practice
 
-**Collecting my coding practices related to Data Structures and Algorithm.**
+**Collecting my coding practices related to Data Structures and Algorithms.**
 
-All the DataStructure implementations are with explanations and guide-comments.<br>
+The DataStructure implementations are with explanations and guide-comments.<br>
 
 - [Stack](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Stack/Stack.js)
 - [Queue](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Queue/Queue.js)
@@ -18,7 +18,8 @@ All the DataStructure implementations are with explanations and guide-comments.<
 - [HashTable](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTable.js)
   - [HashTableSeparateChaining](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableSeparateChaining.js)
   - [HashTableLinearProbing](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableLinearProbing.js)
+  - [HashTableLinearProbingLazy](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableLinearProbingLazy.js)
 
-practices are according to this perfect book :)
+All practices are according to this perfect book :)
 
 > Learning JavaScript Data Structures and Algorithms - Third Edition - by Loiane Groner
