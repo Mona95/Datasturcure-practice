@@ -3,7 +3,7 @@ import { ValuePair } from "../Dictionary/Dictionary.js";
 import { loseloseHasCode } from "./hashFunctions.js";
 
 /**
- * HashTable(HastMap)
+ * HashTable(HastMap) => a non-sequential data structure
  * Hashing consists of finding a value in a data structure in the shortest time possible.
  *  normally, if we want to get a value from a data structure (using a get method), we need to iterate through the structure until we find it.
  *  When we use a hash function, we already know which position the value is in, so we can simply retrieve it. A hash function is a function that,
