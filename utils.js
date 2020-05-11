@@ -12,3 +12,10 @@ export function defaultToString(item) {
   }
   return item.toString();
 }
+
+export function defaultCompare(a, b) {
+  if (a === b) {
+    return 0;
+  }
+  return a < b ? compare.LESS_THAN : compare.BIGGER_THAN;
+}

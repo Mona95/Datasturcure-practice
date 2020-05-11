@@ -1,5 +1,5 @@
 import { LinkedList } from "./LinkedList.js";
-import { defaultEquals } from "../../utils.js";
+import { defaultCompare, defaultEquals } from "../../utils.js";
 
 /**
  * A sorted linked list is a list that keeps its elements sorted.
@@ -12,12 +12,6 @@ const compare = {
   BIGGER_THAN: 1,
 };
 
-function defaultCompare(a, b) {
-  if (a === b) {
-    return 0;
-  }
-  return a < b ? compare.LESS_THAN : compare.BIGGER_THAN;
-}
 //All the methods are similar to LinkedList. just in insertion
 //we need to override it becase the list should be sorted and inserting in any place is not allowed.
 export class SortedLinkedList extends LinkedList {
