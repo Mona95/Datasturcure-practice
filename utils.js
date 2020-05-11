@@ -19,3 +19,8 @@ export function defaultCompare(a, b) {
   }
   return a < b ? compare.LESS_THAN : compare.BIGGER_THAN;
 }
+
+export const compare = {
+  LESS_THAN: -1,
+  BIGGER_THAN: 1,
+};
