@@ -19,7 +19,8 @@ The DataStructure implementations are with explanations and guide-comments.<br>
   - [HashTableSeparateChaining](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableSeparateChaining.js)
   - [HashTableLinearProbing](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableLinearProbing.js)
   - [HashTableLinearProbingLazy](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/HashTable/HashTableLinearProbingLazy.js)
-- [Tree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/Tree.js) -[BinarySearchTree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/BinarySearchTree.js)
+- [Tree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/Tree.js)
+  - [BinarySearchTree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/BinarySearchTree.js)
 
 All practices are according to this perfect book :)
 
