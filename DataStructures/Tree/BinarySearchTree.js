@@ -103,9 +103,27 @@ export class BinarySearchTree {
       this.preOrderTraversNode(node.right, callback);
     }
   }
-  //returns the min value/key in the tree
-  min() {}
-  //returns the max value/key in the tree
-  max() {}
+  //returns the min value/key in the tree, the leftmost node in the last level of the tree
+  min() {
+    return this.minNode(this.root);
+  }
+  minNode(node) {
+    let current = node;
+    while (current != null && current.left != null) {
+      current = current.left;
+    }
+    return current;
+  }
+  //returns the max value/key in the tree, the rightmost node in the last level of the tree
+  max() {
+    return this.maxNode(this.root);
+  }
+  maxNode(node) {
+    let current = node;
+    while (current != null && current.right != null) {
+      current = current.right;
+    }
+    return current;
+  }
   remove(key) {}
 }
