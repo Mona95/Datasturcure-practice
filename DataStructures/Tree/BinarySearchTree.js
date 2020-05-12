@@ -10,6 +10,7 @@ import { Node } from "./model/Node.js";
  * in tree terminology, we will use two pointers,one pointer will point to the left child, and the other one will point to the right child.
  * a key is what a tree node is known as in tree terminology.
  * here we will follow the same patten we used in the linkedlist class, just hear instead of head,we have root.
+ * Tree traversal : is the process of visiting all the nodes of a tree and performing an operation at each node.
  */
 
 export class BinarySearchTree {
@@ -53,12 +54,55 @@ export class BinarySearchTree {
     }
   }
   search(key) {}
-  //method visits all nodes of the tree using in-order travers
-  inOrderTraverse() {}
-  //method visits all nodes of the tree using post-order travers
-  postOrderTravers() {}
-  //method visits all nodes of the tree using pre-order travers
-  preOrderTravers() {}
+  /**
+   * method visits all nodes of the tree using in-order travers
+   * An in-order traversal visits all the nodes of a BST in an ascending order, meaning it will visit the nodes
+   * from the smallest to the largest.
+   * {@link https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/00a6ca97-ba6f-4d21-b8f2-0b0016eead6e.png}
+   * @param {*} callback
+   */
+  inOrderTraverse(callback) {
+    this.inOrderTraverseNode(this.root, callback);
+  }
+  inOrderTraverseNode(node, callback) {
+    //this is the point where the recrusion can stop.
+    if (node != null) {
+      this.inOrderTraverseNode(node.left, callback);
+      callback(node.key);
+      this.inOrderTraverseNode(node.right, callback);
+    }
+  }
+  /**
+   * method visits all nodes of the tree using post-order travers
+   * A post-order traversal visits the node after it visits its descendants.
+   * @param {*} callback
+   */
+  postOrderTravers(callback) {
+    this.postOrderTraversNode(this.root, callback);
+  }
+  postOrderTraversNode(node, callback) {
+    if (node != null) {
+      this.postOrderTraversNode(node.left, callback);
+      this.preOrderTraversNode(node.right, callback);
+      callback(node.key);
+    }
+  }
+  /**
+   * method visits all nodes of the tree using pre-order travers
+   * A pre-order traversal visits the node prior to its descendants.
+   * {@link https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/b935ecf7-4c1c-4639-bb97-0c12a2a88104.png}
+   * @param {*} callback
+   */
+  preOrderTravers(callback) {
+    this.preOrderTraversNode(this.root, callback);
+  }
+  preOrderTraversNode(node, callback) {
+    if (node != null) {
+      callback(node.key);
+      this.preOrderTraversNode(node.left, callback);
+      this.preOrderTraversNode(node.right, callback);
+    }
+  }
   //returns the min value/key in the tree
   min() {}
   //returns the max value/key in the tree
