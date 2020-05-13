@@ -1,6 +1,6 @@
-import { HashTable } from "../../all";
-import { defaultToString } from "../../utils";
-import { ValuePair } from "../Dictionary/Dictionary";
+import { HashTable } from "../../all.js";
+import { defaultToString } from "../../utils.js";
+import { ValuePair } from "../Dictionary/Dictionary.js";
 
 /**
  * Here is another technique to solve collision,which is called soft/lazy deletion.

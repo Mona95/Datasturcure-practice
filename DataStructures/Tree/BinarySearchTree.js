@@ -1,4 +1,4 @@
-import { compare, defaultCompare } from "../../utils";
+import { compare, defaultCompare } from "../../utils.js";
 import { Node } from "./model/Node.js";
 
 /**

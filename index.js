@@ -1,5 +1,4 @@
 import * as DS from "./all.js";
-
 /**
  * using "STACK"
  * Converting Decimal numbers to binary
