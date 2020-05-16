@@ -1,5 +1,12 @@
 import { BinarySearchTree } from "../../all.js";
+import { Node } from "./model/Node.js";
 import { defaultCompare, compare } from "../../utils.js";
+import {
+  rotationLL,
+  rotationLR,
+  rotationRR,
+  rotationRL,
+} from "./balancingOperations/balanceOperations.js";
 
 /**
  * The AVL tree (Adelson-Velskii and Landi's tree) is a self-balancing tree, meaning the tree tries to self-balance whenever a node is added to it
@@ -55,5 +62,45 @@ export class AVLTree extends BinarySearchTree {
       default:
         return BalanceFactor.BALANCED;
     }
+  }
+  insert(key) {
+    this.root = this.insertNode(this.root, key);
+  }
+  /**
+   * After inserting a node in AVL Tree we need to check if its still balanced or not,
+   * we again calculate the balance factor for each node and if we saw the a node had a balance factor different with -1,0,1
+   * then by starting from leaf we try to find the node which made the branch unbalanced .and based on the rotation operations
+   * we try to convert the BST to AVL tree .
+   * @param {*} node
+   * @param {*} key
+   */
+  insertNode(node, key) {
+    //insert node as in BST tree
+    if (node == null) {
+      return new Node(key);
+    } else if (this.compareFn(key, node.key) === compare.LESS_THAN) {
+      node.left = this.insertNode(node.left, key);
+    } else if (this.compareFn(key, node.key) === compare.BIGGER_THAN) {
+      node.right = this.insertNode(node.right, key);
+    } else {
+      return node; //duplicated key exists, while its not bigger or lesser,then its equal
+    }
+    //balance the tree if needed, we need to check the balance factor for each node
+    const balanceFactor = this.getBalanceFactor(node);
+    if (balanceFactor === BalanceFactor.UNBALANCED_LEFT) {
+      if (this.compareFn(key, node.left.key) === compare.LESS_THAN) {
+        node = rotationLL(node);
+      } else {
+        node = rotationLR(node);
+      }
+    }
+    if (balanceFactor === BalanceFactor.UNBALANCED_RIGHT) {
+      if (this.compareFn(key, node.right.key) === compare.BIGGER_THAN) {
+        node = rotationRR(node);
+      } else {
+        node = rotationRL(node);
+      }
+    }
+    return node;
   }
 }

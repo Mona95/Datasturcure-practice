@@ -37,7 +37,7 @@ export function rotationRR(node) {
 }
 
 /**
- * Left-right case : double rotation to the right
+ * Left-right case : double rotation to the right (first RR then LL)
  * this case occurs when the height of a node's left child becomes greater than that of the right child,and the left child is right-heavy,
  * in this case, we can fix it by doing a left rotation on the left child, which results in the left-left case then we can fix it again by doing a right
  * rotation on the unbalanced tree .
@@ -50,7 +50,7 @@ export function rotationLR(node) {
 }
 
 /**
- * Reft-Left case : double rotation to the left
+ * Reft-Left case : double rotation to the left(first LL then RR)
  * this case occurs when the height of a node's right child becomes greater than that of the left child,and the right child is left-heavy,
  * in this case, we can fix it by doing a right rotation on the right child, which results in the right-right case then we can fix it again by doing a left
  * rotation on the unbalanced tree .
