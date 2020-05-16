@@ -41,7 +41,7 @@ export function rotationRR(node) {
  * this case occurs when the height of a node's left child becomes greater than that of the right child,and the left child is right-heavy,
  * in this case, we can fix it by doing a left rotation on the left child, which results in the left-left case then we can fix it again by doing a right
  * rotation on the unbalanced tree .
- * {@link https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/12860eec-8ce3-4047-8a8b-404b96c05db4.png}
+ * {@link https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/bdc33f91-c7b8-4ba3-b59a-ffc3b2af9a46.png}
  */
 
 export function rotationLR(node) {
