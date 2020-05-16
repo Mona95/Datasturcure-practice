@@ -103,4 +103,49 @@ export class AVLTree extends BinarySearchTree {
     }
     return node;
   }
+  /**
+   * Since AVL tree is a child class of BST class, we can use the removeNode method from BST to remove the node from AVL tree as well,
+   * but after removing we need to check whether the tree needs to be balanced .
+   * for every node from the node that was removed to the tree root recursively, and we will apply the correct rotation for each case.
+   * @param {*} node
+   * @param {*} key
+   */
+  removeNode(node, key) {
+    node = super.removeNode(node, key);
+    if ((node = null)) {
+      return node; //null, no need to balance
+    }
+    //verify if tree is balanced
+    const balanceFactor = this.getBalanceFactor(node);
+    //if after removing the node, in the left-hand side subtree the tree is unbalanced
+    if (balanceFactor === BalanceFactor.UNBALANCED_LEFT) {
+      //calculate the balance factor for left subtree,
+      const balanceFactorLeft = this.getBalanceFactor(node.left);
+      if (
+        balanceFactorLeft === BalanceFactor.BALANCED ||
+        balanceFactorLeft === BalanceFactor.SLIGHTLY_UNBALANCED_LEFT
+      ) {
+        return rotationLL(node);
+      }
+      //if the left subtree is unbalanced to the right
+      if (balanceFactorLeft === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT) {
+        return rotationLR(node.left);
+      }
+    }
+    //if after removing the node, in the right-hand side subtree the tree is unbalanced
+    if (balanceFactor === BalanceFactor.UNBALANCED_RIGHT) {
+      const balanceFactorRight = this.getBalanceFactor(node.right);
+      if (
+        balanceFactorRight === BalanceFactor.BALANCED ||
+        balanceFactorRight === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT
+      ) {
+        return this.rotationRR(node);
+      }
+      //if the right subtree is unbalanced to the left
+      if (balanceFactorRight === BalanceFactor.SLIGHTLY_UNBALANCED_LEFT) {
+        return this.rotationRL(node.right);
+      }
+    }
+    return node;
+  }
 }
