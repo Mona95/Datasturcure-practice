@@ -13,6 +13,7 @@ import { HashTableSeparateChaining } from "./DataStructures/HashTable/HashTableS
 import { HashTableLinearProbing } from "./DataStructures/HashTable/HashTableLinearProbing.js";
 import { HashTableLinearProbingLazy } from "./DataStructures/HashTable/HashTableLinearProbingLazy.js";
 import { BinarySearchTree } from "./DataStructures/Tree/BinarySearchTree.js";
+import { AVLTree } from "./DataStructures/Tree/AVLTree.js";
 
 export {
   StackArray,
@@ -31,4 +32,5 @@ export {
   HashTableLinearProbing,
   HashTableLinearProbingLazy,
   BinarySearchTree,
+  AVLTree,
 };
