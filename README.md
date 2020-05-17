@@ -22,6 +22,7 @@ The DataStructure implementations are with explanations and guide-comments.<br>
 - [Tree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/Tree.js)
   - [BinarySearchTree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/BinarySearchTree.js)
   - [AVLTree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/AVLTree.js)
+  - [Red-BlackTree](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Tree/RedBlackTree.js)
 
 All practices are according to this perfect book :)
 
