@@ -44,6 +44,37 @@ export class MinHeap {
     }
   }
   /**
+   * The sift down operation (Heapify)
+   * consists of swapping the element with its smallest child(min heap), if the element is smaller than its left child (and index is valid), we will swap the element
+   * with its left child, if the element us smaller than its right child (and index is valid) , we will swap the element with its right child.
+   * after finding the smallest child index, we will verify whether its value is same as the index of the element(passed to the siftDown method) - no point
+   * in swapping the value with itself ! if not, then we swap it with its smallest element and we repeat the same process starting with the smallest element until
+   * the element is placed in its correct position.
+   * @param {*} index
+   */
+  siftDown(index) {
+    let element = index;
+    const left = this.getLeftIndex(index),
+      right = this.getRightIndex(indx),
+      size = this.size();
+    if (
+      left < size &&
+      this.compareFn(this.heap[element], this.heap[left]) > compare.BIGGER_THAN
+    ) {
+      element = left;
+    }
+    if (
+      right < size &&
+      this.compareFn(this.heap[element], this.heap[right]) > compare.BIGGER_THAN
+    ) {
+      element = right;
+    }
+    if (index !== element) {
+      this.swap(this.heap, index, element);
+      this.siftDown(element);
+    }
+  }
+  /**
    * Inserting a new value into the heap is performed by adding the value at the bottom leaf of the heap(last position of the array).
    * and then performing the `siftUp` method, meaning we will swap the value with its parent until its parent is smaller than the value being inserted.
    * @param {*} value
@@ -56,8 +87,26 @@ export class MinHeap {
     }
     return false;
   }
-  //This method is responsible to remove the minimum valu (min heap) and returns it.
-  extract() {}
-  //This method returns the minimum value without returning it
-  findMinimum() {}
+  //This method is responsible to remove the minimum value (in min heap which is the first element) and returns it.
+  extract() {
+    if (!this.isEmpty) {
+      if (this.size() === 1) {
+        return this.heap.shift();
+      }
+      const removedValue = this.heap.shift();
+      this.siftDown(0);
+      return removedValue;
+    }
+    return undefined;
+  }
+  //This method returns the minimum value without removing it (in MinHeap tree the min value is always located at the first index of the array)
+  findMinimum() {
+    return this.isEmpty() ? undefined : this.heap[0];
+  }
+  size() {
+    return this.heap.length;
+  }
+  isEmpty() {
+    return this.size() === 0;
+  }
 }
