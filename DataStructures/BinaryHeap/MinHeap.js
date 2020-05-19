@@ -46,7 +46,7 @@ export class MinHeap {
   /**
    * The sift down operation (Heapify)
    * consists of swapping the element with its smallest child(min heap), if the element is smaller than its left child (and index is valid), we will swap the element
-   * with its left child, if the element us smaller than its right child (and index is valid) , we will swap the element with its right child.
+   * with its left child, if the element is smaller than its right child (and index is valid) , we will swap the element with its right child.
    * after finding the smallest child index, we will verify whether its value is same as the index of the element(passed to the siftDown method) - no point
    * in swapping the value with itself ! if not, then we swap it with its smallest element and we repeat the same process starting with the smallest element until
    * the element is placed in its correct position.
