@@ -15,7 +15,7 @@ import { HashTableLinearProbingLazy } from "./DataStructures/HashTable/HashTable
 import { BinarySearchTree } from "./DataStructures/Tree/BinarySearchTree.js";
 import { AVLTree } from "./DataStructures/Tree/AVLTree.js";
 import { RedBlackTree } from "./DataStructures/Tree/RedBlackTree.js";
-import { BinaryHeap } from "./DataStructures/BinaryHeap/BinaryHeap.js";
+import { MinHeap } from "./DataStructures/BinaryHeap/MinHeap.js";
 
 export {
   StackArray,
@@ -36,4 +36,5 @@ export {
   BinarySearchTree,
   AVLTree,
   RedBlackTree,
+  MinHeap,
 };
