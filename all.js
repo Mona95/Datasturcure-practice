@@ -16,6 +16,7 @@ import { BinarySearchTree } from "./DataStructures/Tree/BinarySearchTree.js";
 import { AVLTree } from "./DataStructures/Tree/AVLTree.js";
 import { RedBlackTree } from "./DataStructures/Tree/RedBlackTree.js";
 import { MinHeap } from "./DataStructures/BinaryHeap/MinHeap.js";
+import { MaxHeap } from "./DataStructures/BinaryHeap/MaxHeap.js";
 
 export {
   StackArray,
@@ -37,4 +38,5 @@ export {
   AVLTree,
   RedBlackTree,
   MinHeap,
+  MaxHeap,
 };

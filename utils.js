@@ -20,6 +20,10 @@ export function defaultCompare(a, b) {
   return a < b ? compare.LESS_THAN : compare.BIGGER_THAN;
 }
 
+export function reverseCompare(compareFn) {
+  return (a, b) => compareFn(b, a);
+}
+
 export const compare = {
   LESS_THAN: -1,
   BIGGER_THAN: 1,
