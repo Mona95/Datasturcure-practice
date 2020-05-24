@@ -51,3 +51,47 @@ export const breadthFirstSearch = (graph, startVertex, callback) => {
     }
   }
 };
+
+/**
+ * Implementation of an improved BFS function shortest paths using BFS
+ * @param {*} graph
+ * @param {*} startVertex
+ */
+const BFS = (graph, startVertex) => {
+  const vertices = graph.getVertices(),
+    adjList = graph.getAdjList(),
+    color = initializeColor(vertices),
+    queue = new Queue(),
+    distances = [],
+    predecessors = []; //which are used to derive the shortest path from v to every other vertex u
+
+  queue.enqueue(startVertex);
+
+  //initializing the distances array with 0 and the predecessors array with null for every vertex of the graph
+  for (let i = 0; i < vertices.length; i++) {
+    distances[vertices[i]] = 0;
+    predecessors[vertices[i]] = nu;
+  }
+
+  while (!queue.isEmpty()) {
+    const u = queue.dequeue();
+    const neighbors = adjList.get(u);
+    color[u] = Colors.GREY;
+    for (let i = 0; i < neighbors.length; i++) {
+      const w = neighbors[i];
+      if (color[w] === Colors.WHITE) {
+        color[w] = Colors.GREY;
+        //when we discover the neighbor w of a vertex u , we will set the predecessor value of w as u
+        //and also increment the distance between v and w by adding 1 and the distance of u(as u is a predecessor of w, we have the value of distance[u])
+        distances[w] = distances[u] + 1;
+        predecessors[w] = u;
+        queue.enqueue(w);
+      }
+    }
+    color[u] = Colors.BLACK;
+  }
+  return {
+    distances,
+    predecessors,
+  };
+};
