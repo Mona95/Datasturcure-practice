@@ -14,6 +14,7 @@
  * 3- mark v as explored(black)
  *
  * as you noticed, the DFS steps are recrusive, meaning the DFS algorithm uses a stack to store the calls(a stack created by the recrusive calls).
+ * the idea behind the DFS algorithm, the edges are explored out of the most recently discovered vertex.
  */
 
 import { initializeColor, Colors } from "./colors";
@@ -47,4 +48,58 @@ const depthFirstSearchVisit = (u, color, adjList, callback) => {
     }
   }
   color[u] = Colors.BLACK;
+};
+
+/**
+ * Implementation of DFS with discovery time and finish explorer
+ * the discovery time d[u] of u
+ * the finish time f[u] when u is marked black
+ * the predecessors p[u] of u
+ *
+ * there are two things we need to check in the DFS algorithm:
+ * the time variable can only have values from one to two times the number of vertices of the graph
+ * for all the vertices u, d[u] < f[u](meaning the discovered time needs to have a lower value than the finish time)
+ */
+const DFS = (graph) => {
+  const vertices = graph.getVertices(),
+    adjList = graph.getAdjList(),
+    color = initializeColor(vertices),
+    d = [],
+    f = [],
+    p = [],
+    time = { count: 0 };
+
+  //initializing these arrays for each vertex of the graph
+  for (let i = 0; i < vertices.length; i++) {
+    f[vertices[i]] = 0;
+    d[vertices[i]] = 0;
+    p[vertices[i]] = null;
+  }
+  for (let i = 0; i < vertices.length; i++) {
+    if (color[vertices[i]] === Colors.WHITE) {
+      DFSVisit(vertices[i], color, d, f, p, time, adjList);
+    }
+  }
+  return {
+    discovery: d,
+    finished: f,
+    predecessors: p,
+  };
+};
+
+const DFSVisit = (u, color, d, f, p, time, adjList) => {
+  color[u] = Colors.WHITE.GREY;
+  //when a vertex in first discovered, we will track its discovery time,
+  d[u] = ++time.count;
+  const neighbors = adjList.get(u);
+  for (let i = 0; i < neighbors.length; i++) {
+    const w = neighbors[i];
+    if (color[w] === Colors.WHITE) {
+      p[w] = u;
+      DFSVisit(w, color, d, f, p, time, adjList);
+    }
+  }
+  color[u] = Colors.BLACK;
+  //track the vertex's finish time when the vertex is totally explored
+  f[u] = ++time.count;
 };
