@@ -37,4 +37,48 @@ export class Graph {
     this.adjList = new Dictionary(); //using a dictionary to store the adjacent list, dictionary will use the name of the vertex as a key
     //and the list of adjacent vertices as value.
   }
+  addVertex(v) {
+    if (!this.vertices.includes(v)) {
+      this.vertices.push(v);
+      this.adjList.set(v, []); //initializing the adjacent list with an empty array by setting dictionary value of the vertex v key with an empty array.
+    }
+  }
+  /**
+   * Method receives two parameters, which are the vertices we want to link the graph.
+   * before linking the vertices, we need to verify if the vertices exist in the graph.if they do not exist, we will
+   * add them to the list of vertices .
+   * then we will add and edge from vertex v to vertex w by adding w to the adjacent list of v .
+   * @param {*} v
+   * @param {*} w
+   */
+  addEdge(v, w) {
+    if (!this.adjList.get(v)) {
+      this.addVertex(v);
+    }
+    if (!this.adjList.get(w)) {
+      this.addVertex(w);
+    }
+    this.adjList.get(v).push(w); //adding edge from v to w
+    if (!this.isDirected) {
+      this.adjList.get(w).push(v); //just adding new elements to the array as we have already initialized it
+    }
+  }
+  getVertices() {
+    return this.vertices;
+  }
+  getAdjList() {
+    return this.adjList;
+  }
+  toString() {
+    let s = "";
+    for (let i = 0; i < this.vertices.length; i++) {
+      s += `${this.vertices[i]} ->`; //first adding the name of vertex to string
+      const neighbors = this.adjList.get(this.vertices[i]); // then we will get the adjacent list for that vertex
+      for (let j = 0; j < neighbors.length; j++) {
+        s += `${neighbors[j]}`;
+      }
+      s += "\n";
+    }
+    return s;
+  }
 }
