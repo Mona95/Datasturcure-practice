@@ -26,6 +26,7 @@ The DataStructure implementations are with explanations and guide-comments.<br>
 - [BinaryHeap](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/BinaryHeap/BinaryHeap.js)
   - [MinHeap](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/BinaryHeap/MinHeap.js)
   - [MaxHeap](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/BinaryHeap/MaxHeap.js)
+- [Graph](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Graph/Graph.js)
 
 All practices are according to this perfect book :)
 
