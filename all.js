@@ -1,3 +1,7 @@
+//====================================//
+//========= DATA STRUCTURES ==========//
+//====================================//
+
 import { StackArray, StackObject } from "./DataStructures/Stack/Stack.js";
 import { Queue } from "./DataStructures/Queue/Queue.js";
 import { Deque } from "./DataStructures/Deque/Deque.js";
@@ -18,6 +22,11 @@ import { RedBlackTree } from "./DataStructures/Tree/RedBlackTree.js";
 import { MinHeap } from "./DataStructures/BinaryHeap/MinHeap.js";
 import { MaxHeap } from "./DataStructures/BinaryHeap/MaxHeap.js";
 import { Graph } from "./DataStructures/Graph/Graph.js";
+
+//====================================//
+//============ ALGORITHMS ============//
+//====================================//
+import { bubbleSort } from "./Algorithms/bubbleSort.js";
 
 export {
   StackArray,
@@ -41,4 +50,5 @@ export {
   MinHeap,
   MaxHeap,
   Graph,
+  bubbleSort,
 };
