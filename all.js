@@ -29,6 +29,7 @@ import { Graph } from "./DataStructures/Graph/Graph.js";
 import { bubbleSort } from "./Algorithms/bubbleSort.js";
 import { selectionSort } from "./Algorithms/selectionSort.js";
 import { insertionSort } from "./Algorithms/insertionSort.js";
+import { mergeSort } from "./Algorithms/mergeSort.js";
 
 export {
   StackArray,
@@ -55,4 +56,5 @@ export {
   bubbleSort,
   selectionSort,
   insertionSort,
+  mergeSort,
 };
