@@ -39,4 +39,4 @@ All practices are according to this perfect book :)
 
 ## Algorithms
 
-- [BubbleSort](<(https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bubbleSort.js)>)
+- [BubbleSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bubbleSort.js)
