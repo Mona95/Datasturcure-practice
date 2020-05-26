@@ -30,6 +30,7 @@ import { bubbleSort } from "./Algorithms/bubbleSort.js";
 import { selectionSort } from "./Algorithms/selectionSort.js";
 import { insertionSort } from "./Algorithms/insertionSort.js";
 import { mergeSort } from "./Algorithms/mergeSort.js";
+import { quickSort } from "./Algorithms/quickSort.js";
 
 export {
   StackArray,
@@ -57,4 +58,5 @@ export {
   selectionSort,
   insertionSort,
   mergeSort,
+  quickSort,
 };
