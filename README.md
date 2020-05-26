@@ -2,7 +2,12 @@
 
 **Collecting my coding practices related to Data Structures and Algorithms.**
 
-The DataStructure implementations are with explanations and guide-comments.<br>
+All practices are according to this perfect book :)
+
+> Learning JavaScript Data Structures and Algorithms - Third Edition - by Loiane Groner<br>
+> The DataStructure implementations are with explanations and guide-comments.<br>
+
+## Data Structures
 
 - [Stack](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Stack/Stack.js)
 - [Queue](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Queue/Queue.js)
@@ -32,6 +37,6 @@ The DataStructure implementations are with explanations and guide-comments.<br>
   - [DijkstraAlgorithm](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Graph/algorithms/Dijkstra.js)
   - [FloydWarshalAlgorithm](https://github.com/Mona95/Datasturcure-practice/blob/master/DataStructures/Graphalgorithms/FloydWarshall.js)
 
-All practices are according to this perfect book :)
+## Algorithms
 
-> Learning JavaScript Data Structures and Algorithms - Third Edition - by Loiane Groner
+- [BubbleSort](<(https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bubbleSort.js)>)
