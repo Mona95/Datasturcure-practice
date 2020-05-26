@@ -27,6 +27,7 @@ import { Graph } from "./DataStructures/Graph/Graph.js";
 //============ ALGORITHMS ============//
 //====================================//
 import { bubbleSort } from "./Algorithms/bubbleSort.js";
+import { selectionSort } from "./Algorithms/selectionSort.js";
 
 export {
   StackArray,
@@ -51,4 +52,5 @@ export {
   MaxHeap,
   Graph,
   bubbleSort,
+  selectionSort,
 };

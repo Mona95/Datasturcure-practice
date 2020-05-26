@@ -36,3 +36,6 @@ export const createNonSortedArray = (size) => {
   }
   return array;
 };
+
+export const swap = (array, a, b) =>
+  ([array[a], array[b]] = [array[b], array[a]]);

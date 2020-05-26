@@ -3,7 +3,7 @@
  * first one is bigger than the second one.
  * complexity of this algorithm => O(n^2)
  */
-import { defaultCompare, compare } from "../utils.js";
+import { defaultCompare, compare, swap } from "../utils.js";
 
 /**
  * Each different pass(section) in the whole array made by the outer loop and
@@ -29,5 +29,3 @@ export const bubbleSort = (array, compareFn = defaultCompare) => {
   }
   return array;
 };
-
-const swap = (array, a, b) => ([array[a], array[b]] = [array[b], array[a]]);
