@@ -1,4 +1,4 @@
-# Datasturcure-practice
+# Datasturcure And Algorithms Implementations-practice (with JavaScript)
 
 **Collecting my coding practices related to Data Structures and Algorithms.**
 
