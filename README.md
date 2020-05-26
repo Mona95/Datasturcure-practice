@@ -41,3 +41,4 @@ All practices are according to this perfect book :)
 
 - [BubbleSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bubbleSort.js)
 - [SelectionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/selectionSort.js)
+- [InsertionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/insertionSort.js)
