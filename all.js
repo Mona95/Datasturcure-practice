@@ -33,6 +33,7 @@ import { insertionSort } from "./Algorithms/insertionSort.js";
 import { mergeSort } from "./Algorithms/mergeSort.js";
 import { quickSort } from "./Algorithms/quickSort.js";
 import { countingSort } from "./Algorithms/countingSort.js";
+import { bucketSort } from "./Algorithms/bucketSort.js";
 
 export {
   StackArray,
@@ -62,4 +63,5 @@ export {
   mergeSort,
   quickSort,
   countingSort,
+  bucketSort,
 };
