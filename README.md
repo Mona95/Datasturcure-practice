@@ -49,3 +49,4 @@ All practices are according to this perfect book :)
   - [BucketSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/bucketSort.js)
 - **Searching**
   - [SequentialSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/sequentialSearch.js)
+  - [BinarySearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/binarySearch.js)

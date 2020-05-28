@@ -38,6 +38,7 @@ import { bucketSort } from "./Algorithms/Sorting/bucketSort.js";
 
 //SEARCHING
 import { sequentialSearch } from "./Algorithms/Searching/sequentialSearch.js";
+import { binarySearch } from "./Algorithms/Searching/binarySearch.js";
 
 export {
   StackArray,
@@ -69,4 +70,5 @@ export {
   countingSort,
   bucketSort,
   sequentialSearch,
+  binarySearch,
 };
