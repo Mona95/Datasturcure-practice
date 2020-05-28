@@ -7,7 +7,7 @@
  * {@link https://learning.oreilly.com/library/view/learning-javascript-data/9781788623872/assets/ded3ffc7-a984-4c8e-acf9-2078d07bbb97.png}
  */
 
-import { defaultCompare, compare } from "../utils";
+import { defaultCompare, compare } from "../../utils";
 
 export const insertionSort = (array, compareFn = defaultCompare) => {
   let { length } = array,
