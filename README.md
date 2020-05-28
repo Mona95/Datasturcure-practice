@@ -40,10 +40,12 @@ All practices are according to this perfect book :)
 ## Algorithms
 
 - **Sorting**
-  - [BubbleSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bubbleSort.js)
-  - [SelectionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/selectionSort.js)
-  - [InsertionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/insertionSort.js)
-  - [MergeSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/mergeSort.js)
-  - [QuickSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/quickSort.js)
-  - [CountingSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/countingSort.js)
-  - [BucketSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/bucketSort.js)
+  - [BubbleSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/bubbleSort.js)
+  - [SelectionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/selectionSort.js)
+  - [InsertionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/insertionSort.js)
+  - [MergeSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/mergeSort.js)
+  - [QuickSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/quickSort.js)
+  - [CountingSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/countingSort.js)
+  - [BucketSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sorting/bucketSort.js)
+- **Searching**
+  - [SequentialSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/sequentialSearch.js)

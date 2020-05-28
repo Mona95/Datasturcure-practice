@@ -27,6 +27,7 @@ import { Graph } from "./DataStructures/Graph/Graph.js";
 //============ ALGORITHMS ============//
 //====================================//
 
+//SORTING
 import { bubbleSort } from "./Algorithms/Sorting/bubbleSort.js";
 import { selectionSort } from "./Algorithms/Sorting/selectionSort.js";
 import { insertionSort } from "./Algorithms/Sorting/insertionSort.js";
@@ -34,6 +35,9 @@ import { mergeSort } from "./Algorithms/Sorting/mergeSort.js";
 import { quickSort } from "./Algorithms/Sorting/quickSort.js";
 import { countingSort } from "./Algorithms/Sorting/countingSort.js";
 import { bucketSort } from "./Algorithms/Sorting/bucketSort.js";
+
+//SEARCHING
+import { sequentialSearch } from "./Algorithms/Searching/sequentialSearch.js";
 
 export {
   StackArray,
@@ -64,4 +68,5 @@ export {
   quickSort,
   countingSort,
   bucketSort,
+  sequentialSearch,
 };
