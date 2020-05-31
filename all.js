@@ -28,18 +28,18 @@ import { Graph } from "./DataStructures/Graph/Graph.js";
 //====================================//
 
 //SORTING
-import { bubbleSort } from "./Algorithms/Sorting/bubbleSort.js";
-import { selectionSort } from "./Algorithms/Sorting/selectionSort.js";
-import { insertionSort } from "./Algorithms/Sorting/insertionSort.js";
-import { mergeSort } from "./Algorithms/Sorting/mergeSort.js";
-import { quickSort } from "./Algorithms/Sorting/quickSort.js";
-import { countingSort } from "./Algorithms/Sorting/countingSort.js";
-import { bucketSort } from "./Algorithms/Sorting/bucketSort.js";
+import { bubbleSort } from "./Algorithms/Sort/bubbleSort.js";
+import { selectionSort } from "./Algorithms/Sort/selectionSort.js";
+import { insertionSort } from "./Algorithms/Sort/insertionSort.js";
+import { mergeSort } from "./Algorithms/Sort/mergeSort.js";
+import { quickSort } from "./Algorithms/Sort/quickSort.js";
+import { countingSort } from "./Algorithms/Sort/countingSort.js";
+import { bucketSort } from "./Algorithms/Sort/bucketSort.js";
 
 //SEARCHING
-import { sequentialSearch } from "./Algorithms/Searching/sequentialSearch.js";
-import { binarySearch } from "./Algorithms/Searching/binarySearch.js";
-import { interpolationSearch } from "./Algorithms/Searching/interpolationSearch.js";
+import { sequentialSearch } from "./Algorithms/Search/sequentialSearch.js";
+import { binarySearch } from "./Algorithms/Search/binarySearch.js";
+import { interpolationSearch } from "./Algorithms/Search/interpolationSearch.js";
 
 export {
   StackArray,

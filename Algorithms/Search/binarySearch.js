@@ -8,7 +8,7 @@
  */
 
 import { defaultCompare, compare } from "../../utils";
-import { quickSort } from "../Sorting/quickSort";
+import { quickSort } from "../Sort/quickSort";
 
 export const binarySearch = (array, value, compareFn = defaultCompare) => {
   const sortedArray = quickSort(array); //first thing is to sort the array
