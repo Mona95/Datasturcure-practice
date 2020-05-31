@@ -50,3 +50,4 @@ All practices are according to this perfect book :)
 - **Searching**
   - [SequentialSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/sequentialSearch.js)
   - [BinarySearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/binarySearch.js)
+  - [InterpolationSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Searching/interpolationSearch.js)
