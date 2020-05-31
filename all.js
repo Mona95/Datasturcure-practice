@@ -41,6 +41,9 @@ import { sequentialSearch } from "./Algorithms/Search/sequentialSearch.js";
 import { binarySearch } from "./Algorithms/Search/binarySearch.js";
 import { interpolationSearch } from "./Algorithms/Search/interpolationSearch.js";
 
+//SHUFFLING
+import { shuffle } from "./Algorithms/Shuffle/fisherYatesShuffle.js";
+
 export {
   StackArray,
   StackObject,
@@ -73,4 +76,5 @@ export {
   sequentialSearch,
   binarySearch,
   interpolationSearch,
+  shuffle,
 };
