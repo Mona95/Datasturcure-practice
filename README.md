@@ -40,16 +40,20 @@ All practices are according to this perfect book :)
 ## Algorithms
 
 - **Sorting**
-  - [BubbleSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/bubbleSort.js)
-  - [SelectionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/selectionSort.js)
-  - [InsertionSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/insertionSort.js)
-  - [MergeSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/mergeSort.js)
-  - [QuickSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/quickSort.js)
-  - [CountingSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/countingSort.js)
-  - [BucketSort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/bucketSort.js)
+  - [Bubble Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/bubbleSort.js)
+  - [Selection Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/selectionSort.js)
+  - [Insertion Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/insertionSort.js)
+  - [Merge Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/mergeSort.js)
+  - [Quick Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/quickSort.js)
+  - [Counting Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/countingSort.js)
+  - [Bucket Sort](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Sort/bucketSort.js)
 - **Searching**
-  - [SequentialSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/sequentialSearch.js)
-  - [BinarySearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/binarySearch.js)
-  - [InterpolationSearch](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/interpolationSearch.js)
+  - [Sequential Search](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/sequentialSearch.js)
+  - [Binary Search](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/binarySearch.js)
+  - [Interpolation Search](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/Search/interpolationSearch.js)
 - **Shuffle**
   - [Fisher-Yates](https://github.com/Mona95/Datasturcure-practice/blob/master/Algorithms/shuffle/fisherYatesShuffle.js)
+
+## Problem Solving
+
+- [Minimum Coin Change](https://github.com/Mona95/Datasturcure-practice/blob/master/ProblemSolvings/minCoinChange.js)
