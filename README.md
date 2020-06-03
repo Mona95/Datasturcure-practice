@@ -57,3 +57,4 @@ All practices are according to this perfect book :)
 ## Problem Solving
 
 - [Minimum Coin Change](https://github.com/Mona95/Datasturcure-practice/blob/master/ProblemSolvings/minCoinChange.js)
+- [Knapsack](https://github.com/Mona95/Datasturcure-practice/blob/master/ProblemSolvings/knapsack.js)
